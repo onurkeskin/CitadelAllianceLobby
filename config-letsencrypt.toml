@@ -1,0 +1,37 @@
+debug = false
+
+logLevel = "debug"
+defaultEntryPoints = ["https","http"]
+
+[web]
+address=":8080"
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+  [entryPoints.https.tls]
+
+[retry]
+
+[docker]
+endpoint = "unix:///var/run/docker.sock"
+domain = "citadelalliance.com"
+watch = true
+exposedByDefault = false
+
+[acme]
+email = "onurkeskin@keon.com"
+storage = "acme.json"
+entryPoint = "https"
+onHostRule = true
+[acme.httpChallenge]
+entryPoint = "http"
+
+
+[traefikLog]
+  filePath = "/home/traefik/traefik.log"
+  format   = "json"

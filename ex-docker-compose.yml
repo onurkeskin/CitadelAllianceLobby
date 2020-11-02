@@ -1,0 +1,94 @@
+# docker-compose.yml
+version: '3.1'
+
+services:  
+  raefik:
+    image: traefik:1.4
+    ports:
+      - 80:80
+      - 8080:8080
+    networks:
+      - traefik-net
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    # configs:
+    #   - source: traefik-config
+    #     target: /etc/traefik/traefik.toml
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+
+  # user-cli:
+  #   build: 
+  #     dockerfile: ./user-cli/Dockerfile
+  #     context: .
+  #   environment:
+
+  # mailing-service:
+  #   build: 
+  #     dockerfile: ./mailing-service/Dockerfile
+  #     context: .
+  #   environment:
+
+  user-service:
+    build: 
+      dockerfile: ./user-service/Dockerfile
+      context: .
+    networks:
+      - traefik-net
+    deploy:
+      placement:
+        constraints:
+          - node.role == worker
+    labels:
+      - "traefik.port=5000"
+      - "traefik.backend=users"
+    environment:
+      DB_HOST: "database"
+      DB_USER: "postgres"
+      DB_PASS: ""
+      DB_NAME: "CitadelAlliance"
+      DB_PORT: "5432"
+
+  database:
+    build: ./postgre
+    ports:
+      - 5432:5432
+    volumes:
+      - citadelalliance-db-data:/var/lib/postgresql/10/main
+    environment:
+      DEBUG: "false"
+
+      DB_USER: postgres
+      DB_PASS: 
+      DB_NAME: CitadelAlliance
+      DB_TEMPLATE:
+      DB_READY: "false"
+      DB_EXTENSION:
+
+      REPLICATION_MODE:
+      REPLICATION_USER:
+      REPLICATION_PASS:
+      REPLICATION_SSLMODE:
+
+  # nats:
+  #   image: nats:latest
+  #   expose:
+  #     - "4222"
+  #   ports:
+  #     - "8222:8222"
+  #   hostname: nats-server
+
+networks:
+  traefik-net:
+    driver: overlay
+
+# configs:
+#   traefik-config:
+#     file: config.toml
+
+volumes:
+  citadelalliance-db-data:
+
+    

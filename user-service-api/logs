@@ -1,0 +1,767 @@
+2018/10/29 14:08:09 asdasd
+2018/10/29 14:08:09 &mux.Route{
+    parent: &mux.Router{
+        NotFoundHandler: nil,
+        parent:          nil,
+        routes:          {
+            &mux.Route{(CYCLIC REFERENCE)},
+        },
+        namedRoutes: {
+            "ListUsers": &mux.Route{(CYCLIC REFERENCE)},
+        },
+        strictSlash: true,
+        skipClean:   false,
+        KeepContext: false,
+    },
+    handler:  nil,
+    matchers: {
+        mux.methodMatcher{"GET"},
+        &mux.routeRegexp{
+            template:    "/users-api/users",
+            matchHost:   false,
+            matchQuery:  false,
+            strictSlash: true,
+            regexp:      &regexp.Regexp{
+                regexpRO: regexp.regexpRO{
+                    expr: "^/users-api/users[/]?$",
+                    prog: &syntax.Prog{
+                        Inst: {
+                            {
+                                Op:   0x5,
+                                Out:  0x0,
+                                Arg:  0x0,
+                                Rune: nil,
+                            },
+                            {
+                                Op:   0x3,
+                                Out:  0x2,
+                                Arg:  0x4,
+                                Rune: nil,
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x3,
+                                Arg:  0x0,
+                                Rune: {47},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x4,
+                                Arg:  0x0,
+                                Rune: {117},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x5,
+                                Arg:  0x0,
+                                Rune: {115},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x6,
+                                Arg:  0x0,
+                                Rune: {101},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x7,
+                                Arg:  0x0,
+                                Rune: {114},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x8,
+                                Arg:  0x0,
+                                Rune: {115},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x9,
+                                Arg:  0x0,
+                                Rune: {45},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xa,
+                                Arg:  0x0,
+                                Rune: {97},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xb,
+                                Arg:  0x0,
+                                Rune: {112},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xc,
+                                Arg:  0x0,
+                                Rune: {105},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xd,
+                                Arg:  0x0,
+                                Rune: {47},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xe,
+                                Arg:  0x0,
+                                Rune: {117},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xf,
+                                Arg:  0x0,
+                                Rune: {115},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x10,
+                                Arg:  0x0,
+                                Rune: {101},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x11,
+                                Arg:  0x0,
+                                Rune: {114},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x13,
+                                Arg:  0x0,
+                                Rune: {115},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x14,
+                                Arg:  0x0,
+                                Rune: {47},
+                            },
+                            {
+                                Op:   0x0,
+                                Out:  0x12,
+                                Arg:  0x14,
+                                Rune: nil,
+                            },
+                            {
+                                Op:   0x3,
+                                Out:  0x15,
+                                Arg:  0x8,
+                                Rune: nil,
+                            },
+                            {
+                                Op:   0x4,
+                                Out:  0x0,
+                                Arg:  0x0,
+                                Rune: nil,
+                            },
+                        },
+                        Start:  1,
+                        NumCap: 2,
+                    },
+                    onepass: &regexp.onePassProg{
+                        Inst: {
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x5,
+                                    Out:  0x0,
+                                    Arg:  0x0,
+                                    Rune: nil,
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x3,
+                                    Out:  0x2,
+                                    Arg:  0x4,
+                                    Rune: {47, 47},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x3,
+                                    Arg:  0x0,
+                                    Rune: {47},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x4,
+                                    Arg:  0x0,
+                                    Rune: {117},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x5,
+                                    Arg:  0x0,
+                                    Rune: {115},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x6,
+                                    Arg:  0x0,
+                                    Rune: {101},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x7,
+                                    Arg:  0x0,
+                                    Rune: {114},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x8,
+                                    Arg:  0x0,
+                                    Rune: {115},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x9,
+                                    Arg:  0x0,
+                                    Rune: {45},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xa,
+                                    Arg:  0x0,
+                                    Rune: {97},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xb,
+                                    Arg:  0x0,
+                                    Rune: {112},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xc,
+                                    Arg:  0x0,
+                                    Rune: {105},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xd,
+                                    Arg:  0x0,
+                                    Rune: {47},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xe,
+                                    Arg:  0x0,
+                                    Rune: {117},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xf,
+                                    Arg:  0x0,
+                                    Rune: {115},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x10,
+                                    Arg:  0x0,
+                                    Rune: {101},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x11,
+                                    Arg:  0x0,
+                                    Rune: {114},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x13,
+                                    Arg:  0x0,
+                                    Rune: {115},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x14,
+                                    Arg:  0x0,
+                                    Rune: {47},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x1,
+                                    Out:  0x14,
+                                    Arg:  0x12,
+                                    Rune: {47, 47},
+                                },
+                                Next: {0x12},
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x3,
+                                    Out:  0x15,
+                                    Arg:  0x8,
+                                    Rune: {},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x4,
+                                    Out:  0x0,
+                                    Arg:  0x0,
+                                    Rune: nil,
+                                },
+                                Next: nil,
+                            },
+                        },
+                        Start:  1,
+                        NumCap: 2,
+                    },
+                    prefix:         "/users-api/users",
+                    prefixBytes:    {0x2f, 0x75, 0x73, 0x65, 0x72, 0x73, 0x2d, 0x61, 0x70, 0x69, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x73},
+                    prefixComplete: false,
+                    prefixRune:     47,
+                    prefixEnd:      0x13,
+                    cond:           0x4,
+                    numSubexp:      0,
+                    subexpNames:    {""},
+                    longest:        false,
+                },
+                mu:      sync.Mutex{},
+                machine: nil,
+            },
+            reverse: "/users-api/users",
+            varsN:   {},
+            varsR:   {
+            },
+        },
+        mux.MatcherFunc {...},
+    },
+    regexp: &mux.routeRegexpGroup{
+        host: (*mux.routeRegexp)(nil),
+        path: &mux.routeRegexp{
+            template:    "/users-api/users",
+            matchHost:   false,
+            matchQuery:  false,
+            strictSlash: true,
+            regexp:      &regexp.Regexp{
+                regexpRO: regexp.regexpRO{
+                    expr: "^/users-api/users[/]?$",
+                    prog: &syntax.Prog{
+                        Inst: {
+                            {
+                                Op:   0x5,
+                                Out:  0x0,
+                                Arg:  0x0,
+                                Rune: nil,
+                            },
+                            {
+                                Op:   0x3,
+                                Out:  0x2,
+                                Arg:  0x4,
+                                Rune: nil,
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x3,
+                                Arg:  0x0,
+                                Rune: {47},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x4,
+                                Arg:  0x0,
+                                Rune: {117},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x5,
+                                Arg:  0x0,
+                                Rune: {115},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x6,
+                                Arg:  0x0,
+                                Rune: {101},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x7,
+                                Arg:  0x0,
+                                Rune: {114},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x8,
+                                Arg:  0x0,
+                                Rune: {115},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x9,
+                                Arg:  0x0,
+                                Rune: {45},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xa,
+                                Arg:  0x0,
+                                Rune: {97},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xb,
+                                Arg:  0x0,
+                                Rune: {112},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xc,
+                                Arg:  0x0,
+                                Rune: {105},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xd,
+                                Arg:  0x0,
+                                Rune: {47},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xe,
+                                Arg:  0x0,
+                                Rune: {117},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0xf,
+                                Arg:  0x0,
+                                Rune: {115},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x10,
+                                Arg:  0x0,
+                                Rune: {101},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x11,
+                                Arg:  0x0,
+                                Rune: {114},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x13,
+                                Arg:  0x0,
+                                Rune: {115},
+                            },
+                            {
+                                Op:   0x8,
+                                Out:  0x14,
+                                Arg:  0x0,
+                                Rune: {47},
+                            },
+                            {
+                                Op:   0x0,
+                                Out:  0x12,
+                                Arg:  0x14,
+                                Rune: nil,
+                            },
+                            {
+                                Op:   0x3,
+                                Out:  0x15,
+                                Arg:  0x8,
+                                Rune: nil,
+                            },
+                            {
+                                Op:   0x4,
+                                Out:  0x0,
+                                Arg:  0x0,
+                                Rune: nil,
+                            },
+                        },
+                        Start:  1,
+                        NumCap: 2,
+                    },
+                    onepass: &regexp.onePassProg{
+                        Inst: {
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x5,
+                                    Out:  0x0,
+                                    Arg:  0x0,
+                                    Rune: nil,
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x3,
+                                    Out:  0x2,
+                                    Arg:  0x4,
+                                    Rune: {47, 47},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x3,
+                                    Arg:  0x0,
+                                    Rune: {47},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x4,
+                                    Arg:  0x0,
+                                    Rune: {117},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x5,
+                                    Arg:  0x0,
+                                    Rune: {115},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x6,
+                                    Arg:  0x0,
+                                    Rune: {101},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x7,
+                                    Arg:  0x0,
+                                    Rune: {114},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x8,
+                                    Arg:  0x0,
+                                    Rune: {115},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x9,
+                                    Arg:  0x0,
+                                    Rune: {45},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xa,
+                                    Arg:  0x0,
+                                    Rune: {97},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xb,
+                                    Arg:  0x0,
+                                    Rune: {112},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xc,
+                                    Arg:  0x0,
+                                    Rune: {105},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xd,
+                                    Arg:  0x0,
+                                    Rune: {47},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xe,
+                                    Arg:  0x0,
+                                    Rune: {117},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0xf,
+                                    Arg:  0x0,
+                                    Rune: {115},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x10,
+                                    Arg:  0x0,
+                                    Rune: {101},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x11,
+                                    Arg:  0x0,
+                                    Rune: {114},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x13,
+                                    Arg:  0x0,
+                                    Rune: {115},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x8,
+                                    Out:  0x14,
+                                    Arg:  0x0,
+                                    Rune: {47},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x1,
+                                    Out:  0x14,
+                                    Arg:  0x12,
+                                    Rune: {47, 47},
+                                },
+                                Next: {0x12},
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x3,
+                                    Out:  0x15,
+                                    Arg:  0x8,
+                                    Rune: {},
+                                },
+                                Next: nil,
+                            },
+                            {
+                                Inst: syntax.Inst{
+                                    Op:   0x4,
+                                    Out:  0x0,
+                                    Arg:  0x0,
+                                    Rune: nil,
+                                },
+                                Next: nil,
+                            },
+                        },
+                        Start:  1,
+                        NumCap: 2,
+                    },
+                    prefix:         "/users-api/users",
+                    prefixBytes:    {0x2f, 0x75, 0x73, 0x65, 0x72, 0x73, 0x2d, 0x61, 0x70, 0x69, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x73},
+                    prefixComplete: false,
+                    prefixRune:     47,
+                    prefixEnd:      0x13,
+                    cond:           0x4,
+                    numSubexp:      0,
+                    subexpNames:    {""},
+                    longest:        false,
+                },
+                mu:      sync.Mutex{},
+                machine: nil,
+            },
+            reverse: "/users-api/users",
+            varsN:   {},
+            varsR:   {
+            },
+        },
+        queries: nil,
+    },
+    strictSlash:   true,
+    skipClean:     false,
+    buildOnly:     false,
+    name:          "ListUsers",
+    err:           nil,
+    buildVarsFunc: mux.BuildVarsFunc {...},
+}

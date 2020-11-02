@@ -1,0 +1,50 @@
+logLevel="DEBUG"
+debug=true
+
+defaultEntryPoints = ["http", "https"]
+
+# For secure connection on backend.local
+rootCAs = [ "/home/certs/backend.cert" ]
+
+[web]
+address=":8080"
+
+[docker]
+endpoint="unix://var/run/docker.sock"
+watch=true
+swarmmode=true
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+    [entryPoints.https.tls]
+     # For secure connection on frontend.local
+     [[entryPoints.https.tls.certificates]]
+     certFile = "/home/certs/frontend.cert"
+     keyFile  = "/home/certs/frontend.key"
+
+
+[api]
+
+[file]
+
+# [backends]
+#   [backends.users]
+#     [backends.users.servers.server1]
+#     # Access on backend with HTTPS
+#     url = "https://backend.local:6767"
+
+
+# [frontends]
+#   [frontends.frontend1]
+#   backend = "users"
+#     [frontends.frontend1.routes.test_1]
+#     rule = "Host:frontend.local"
+
+[traefikLog]
+  filePath = "/home/traefik/traefik.log"
+  format   = "json"

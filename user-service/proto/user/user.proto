@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package keon.com.citadelalliance.user;
+
+service UserService {
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+    rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+    rpc GetAllUsers(GetAllRequest) returns (GetAllResponse) {}
+    rpc Auth(User) returns (Token) {}
+    rpc ValidateToken(Token) returns (Token) {}
+}
+
+message User {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+    string password = 4;
+}
+
+message Token {
+    string token = 1;
+    bool valid = 2;
+    repeated Error errors = 3;
+}
+
+message Error {
+    int32 code = 1;
+    string description = 2;
+}
+
+message GetAllRequest {
+}
+
+message GetAllResponse {
+    repeated User users = 1;
+    repeated Error errors = 2;
+}
+
+message CreateUserRequest {
+    User user = 1;
+}
+
+message CreateUserResponse {
+    string id = 1;
+    bool success = 2;
+    repeated Error errors = 3;
+}
+
+message GetUserRequest {
+    User user = 1;
+}
+
+message GetUserResponse {
+    User user = 1;
+}
